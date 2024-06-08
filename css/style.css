@@ -1,0 +1,250 @@
+@charset "utf-8";
+@font-face {
+    font-family: "CookieRun";
+    src: url('../fonts/CookieRunFont_TTF/CookieRun Regular.ttf');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "CookieRun" !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+body {
+    width: 100%;
+    height: 100px;
+}
+
+.start_zone {
+    width: 100%;
+    padding-top: 20%;
+}
+
+.start_zone.off {
+    animation: disappear 0s forwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes disappear {
+    to {
+        display: none;
+    }
+}
+
+.start_box_container {
+    margin-left: calc(50% - 60px);
+}
+
+.start_box {
+    width: 120px;
+    height: 30px;
+    background-color: rgb(22, 93, 224);
+    margin: 15px 0px;
+    /* margin-left: calc(50% - 60px); */
+    animation: slidein 1s ease-out forwards;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.start_box:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.start_box:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.start_box.disappear {
+    opacity: 1;
+    animation: slideout 1s ease-in forwards;
+}
+
+.start_box.disappear:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.start_box.disappear:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes slidein {
+    from {
+        opacity: 0;
+        transform: translateX(-500%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideout {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(500%);
+        opacity: 0;
+    }
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    /* background-color: #000; */
+    opacity: 0;
+    animation: fadein 1s forwards linear;
+    animation-delay: 1.6s;
+}
+
+.main .introduction {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+.introduction h1 {
+    font-size: 50px;
+    font-family: 'arial';
+}
+
+.introduction p {
+    margin-bottom: 10px;
+}
+
+.introduction ul {
+    width: 60%;
+    display: flex;
+    background-color: gray;
+}
+
+.introduction ul li {
+    flex-grow: 1;
+    margin: 20px;
+    padding: 10px;
+}
+
+.introduction ul li p {
+    cursor: pointer;
+}
+
+.introduce_selection {
+    margin-top: 30px;
+    width: 90%;
+    height: 300px;
+    background-color: gray;
+}
+
+.introduce_selection article {
+    padding: 10px;
+}
+
+.introduce_selection article strong {
+    font-style: italic;
+    font-size: larger;
+}
+
+.introduce_selection article.hobby img {
+    width: 30px;
+    height: 30px;
+    transform: translateY(7px);
+    cursor: pointer;
+}
+
+.introduce_selection article.hobby em.on {
+    animation: colorchange 1s infinite;
+    cursor: pointer;
+}
+
+@keyframes colorchange {
+    0% { color: #2770bd }
+    10% { color: #63957f; }
+    20% { color: #b6a59d; }
+    30% { color: #e5f0ec; }
+    40% { color: #98e79d; }
+    50% { color: #387af3; }
+    60% { color: #b796fb; }
+    70% { color: #ed72bb; }
+    80% { color: #e59457; }
+    90% { color: #626ba3; }
+    100% { color: #2770bd; }
+}
+
+.introduce_selection article.hobby #guitar {
+    display: inline;
+    cursor: pointer;
+}
+
+.introduce_selection article.skill .nowords {
+    cursor: pointer;
+}
+
+.introduce_selection article.off {
+    display: none;
+}
+
+.main .guest_book {
+    vertical-align: top;
+    margin-top: 3%;
+    display: inline-block;
+    width: 40%;
+    height: 100%;
+}
+
+.guest_book .item {
+    position: relative;
+    width: 90%;
+    /* height: 100px; */
+    background-color: #727ece;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.guest_book .item h1 {
+    padding-bottom: 10px;
+    border-bottom: solid 2px #242f72;
+    color: #242f72;
+}
+
+.guest_book .item p {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: #242f72;
+}
+
+.guest_book .item a {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.main.off {
+    display: none;
+}
