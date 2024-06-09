@@ -43,15 +43,14 @@ window.addEventListener('DOMContentLoaded', function () {
     getGuestBooks();
 });
 
-// const inputTitle = document.querySelector(".input_title");
-// const inputBody = document.querySelector(".input_body");
+const inputTitle = document.querySelector(".input_title");
+const inputBody = document.querySelector(".input_body");
+const submitBtn = document.querySelector(".submit_btn");
 
 
-// inputBody.addEventListener('keypress', function (event) {
-//     if(event.key == 'Enter') {
-//         addGuestBook();
-//     }
-// });
+submitBtn.addEventListener('click', function (event) {
+    addGuestBook();
+});
 
 function addGuestBook() {
     const new_title = inputTitle.value.trim();

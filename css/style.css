@@ -110,6 +110,8 @@ body {
     opacity: 0;
     animation: fadein 1s forwards linear;
     animation-delay: 1.6s;
+    background-image: url('../src/Orange.jpg');
+    background-size: cover;
 }
 
 .main .introduction {
@@ -122,27 +124,33 @@ body {
 
 .introduction h1 {
     font-size: 50px;
-    font-family: 'arial';
+    color: #00000000;
+    -webkit-text-stroke: 2px #3f0000;
 }
 
 .introduction p {
     margin-bottom: 10px;
+    color: #8a3700;
 }
 
 .introduction ul {
-    width: 60%;
+    width: 70%;
     display: flex;
-    background-color: gray;
+    background-color: #3f0000;
+    justify-content: center;
+    border-radius: 10px;
 }
 
 .introduction ul li {
     flex-grow: 1;
+    text-align: center;
     margin: 20px;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .introduction ul li p {
     cursor: pointer;
+    font-size: 25px;
 }
 
 .introduce_selection {
@@ -200,12 +208,42 @@ body {
     display: none;
 }
 
-.main .guest_book {
+.main .guest_book_container {
+    display: inline-block;
     vertical-align: top;
+    width: 40%;
+    height: 100%;
+    margin-top: 3%;
+}
+
+.guest_book_container .new_guest_book {
+    width: 100%;
+    /* display: inline-block;
+    vertical-align: top;
+    width: 40%; */
+    height: 200px;
+    /* margin-top: 3%; */
+}
+
+.new_guest_book .input_title {
+    width: 100%;
+}
+
+.new_guest_book .input_body {
+    width: 100%;
+}
+
+.new_guest_book .submit_btn {
+    width: 100%;
+}
+
+.main .guest_book {
+    width: 100%;
+    /* vertical-align: top;
     margin-top: 3%;
     display: inline-block;
     width: 40%;
-    height: 100%;
+    height: 100%; */
 }
 
 .guest_book .item {
@@ -215,6 +253,8 @@ body {
     background-color: #727ece;
     padding: 10px;
     border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
 }
 
 .guest_book .item h1 {
