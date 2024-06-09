@@ -1,5 +1,5 @@
-// const host = "http://35.169.119.254:8085";
-const host = "http://localhost:8085";
+const host = "http://35.169.119.254:8086";
+// const host = "http://localhost:8085";
 const guestBook = document.querySelector('.guest_book');
 
 function getGuestBooks() {
