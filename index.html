@@ -25,9 +25,9 @@
             <p>저는...</p>
             <div>
                 <ul>
-                    <li><p class="hobby_btn">취미</p></li>
-                    <li><p class="skill_btn">특기</p></li>
-                    <li><p class="interest_btn">관심분야</p></li>
+                    <li class="hobby_btn"><p>취미</p></li>
+                    <li class="skill_btn"><p>특기</p></li>
+                    <li class="interest_btn"><p>관심분야</p></li>
                 </ul>
                 <div class="introduce_selection">
                     <article class="hobby off">
@@ -68,9 +68,9 @@
         </div>
         <div class="guest_book_container">
             <div class="new_guest_book">
-                <input type="text" class="input_title">
-                <textarea class="input_body" rows="6"></textarea>
-                <button class="submit_btn">submit</button>
+                <input type="text" class="input_nickname" placeholder="닉네임을 입력해주세요">
+                <textarea class="input_body" rows="4" placeholder="내용을 입력해주세요"></textarea>
+                <button class="submit_btn">방명록 제출하기</button>
             </div>
             <div class="guest_book">
                 <!-- <ul>
@@ -78,6 +78,7 @@
                         <article class="item">
                             <h1>너는 참 대충했구나</h1>
                             <p>디자인이 너무 구리잖아.</p>
+                            <p class="timestamp">2003-12-19</p>
                             <a href="#" class="delete_btn">읭</a>
                         </article>
                     <!-- </li>

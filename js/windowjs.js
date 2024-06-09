@@ -1,13 +1,16 @@
-let window_width = window.innerWidth;
-let window_height = window.innerHeight;
-document.getElementById("body").style.height = window_height + "px";
-document.getElementById("body").style.width = window_width + "px";
+window_width = window.innerWidth;
+window_height = window.innerHeight;
+document.body.style.height = window_height + "px";
+document.body.style.width = window_width + "px";
 
 window.addEventListener("resize", () => {
-    let window_width = window.innerWidth;
-    let window_height = window.innerHeight;
-    document.getElementById("body").style.height = window_height + "px";
-    document.getElementById("body").style.width = window_width + "px";
+    window_width = window.innerWidth;
+    window_height = window.innerHeight;
+    document.body.style.height = window_height + "px";
+    document.body.style.width = window_width + "px";
+    
+    console.log("resized " + window.innerWidth + ", " + window.innerHeight);
+    console.log("body: " + document.body.style.width + ", " + document.body.style.height);
 });
 
 
@@ -17,4 +20,4 @@ window.addEventListener("focus", () => {
 });
 window.addEventListener("blur", () => {
     document.title = "Come Back 😥";
-})
+});
